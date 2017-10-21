@@ -1,0 +1,29 @@
+		log.debug(String.format("Fallback of %s", "zeigeStationen"));
+//		Span span = tracer.createSpan("zeige Stationen Fallback");
+//		try {
+//			tracer.addTag("tag: key", "tag: value");
+//			Thread.sleep(1000);
+//			span.logEvent("log event");
+//		} catch (InterruptedException ex) {
+//		} finally {
+//			tracer.close(span);
+//		}
+			
+		return restTemplate.exchange(getUri() + "Stationen/", HttpMethod.GET, HttpEntity.EMPTY, new ParameterizedTypeReference<List<StationsResource<Station>>>() {}).getBody();
+//		AsyncRestTemplate asycTemp = new AsyncRestTemplate();
+//		
+//		ListenableFuture<ResponseEntity<List<StationsResource<Station>>>> exchange = asycTemp.exchange(getUri() + "Stationen/", HttpMethod.GET, HttpEntity.EMPTY, new ParameterizedTypeReference<List<StationsResource<Station>>>() {});
+//		try {
+//			List<StationsResource<Station>> stationen = exchange.get().getBody();
+//			log.debug(String.format("#%d Stationen vom Server geholt", stationen));
+//			return stationen;
+//		} catch (InterruptedException | ExecutionException e) {
+//			e.printStackTrace();
+//			ListenableFuture<ResponseEntity<String>> response = asycTemp.getForEntity(getUri() + "Stationen/", String.class);
+//			response.addCallback(
+//				s -> System.out.println(String.format("success %s", s.getBody())),
+//				t -> System.out.println(String.format("failure %s", t.getMessage())) 
+//			);
+//		}
+
+//		return new ArrayList<StationsResource<Station>>();

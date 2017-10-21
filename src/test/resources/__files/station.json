@@ -1,0 +1,20 @@
+{
+  "stationsId" : 1,
+  "auswahlkriterien" : {
+    "stadt" : "Test",
+    "kuerzel" : "HR",
+    "stadtteil" : "Harburg",
+    "standort" : "Harburg Rathaus"
+  },
+  "_links" : {
+    "spezifikation" : {
+      "href" : "http://localhost:8181/Stationen/station/id/1/spezifikation"
+    },
+    "fahrzeuge" : {
+      "href" : "http://localhost:8181/Stationen/station/id/1/fahrzeuge"
+    },
+    "self" : {
+      "href" : "http://localhost:8181/Stationen/1"
+    }
+  }
+}
