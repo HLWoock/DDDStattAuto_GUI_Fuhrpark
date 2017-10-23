@@ -11,12 +11,12 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
 import de.woock.ddd.stattauto.gui.fuhrpark.entity.auto.Auto;
 import de.woock.ddd.stattauto.gui.fuhrpark.entity.auto.AutoMap;
 import de.woock.ddd.stattauto.gui.fuhrpark.entity.auto.AutoResource;
-import de.woock.ddd.stattauto.gui.fuhrpark.entity.station.Station;
 import de.woock.ddd.stattauto.gui.fuhrpark.entity.station.StationsResource;
 import de.woock.ddd.stattauto.gui.fuhrpark.service.FuhrparkService;
 import de.woock.ddd.stattauto.gui.fuhrpark.views.FuhrparkView;
@@ -62,7 +62,7 @@ public class AutoTableController implements ListChangeListener, EventHandler<Mou
 	public void handle(MouseEvent event) {
 		log.debug("sende Nachricht");
 		AutoResource<Auto> autoResource = stationenView.tblFahrzeuge.getSelectionModel().getSelectedItem();
-		// Message<AutoResource<Auto>> msg = MessageBuilder.withPayload(autoResource).build();
+		Message msg = (Message) MessageBuilder.withPayload(autoResource).build();
 		jmsTemplate.setDefaultDestinationName("DefektmeldungAuto");
 		jmsTemplate.send(new MessageCreator() {
 			@Override

@@ -22,7 +22,7 @@ import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.client.RestTemplate;
 
-import de.woock.ddd.stattauto.gui.fuhrpark.service.RibbonConfiguration;
+import de.woock.ddd.stattauto.gui.fuhrpark.config.RibbonConfiguration;
 import de.woock.ddd.stattauto.gui.fuhrpark.views.FuhrparkView;
 import javafx.application.Application;
 import javafx.scene.Group;

@@ -1,4 +1,4 @@
-package de.woock.ddd.stattauto.gui.fuhrpark.service;
+package de.woock.ddd.stattauto.gui.fuhrpark.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

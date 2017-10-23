@@ -1,4 +1,4 @@
-package de.woock.ddd.stattauto.gui.fuhrpark;
+package de.woock.ddd.stattauto.gui.fuhrpark.controller;
 
 import org.assertj.core.api.BDDAssertions;
 import org.junit.BeforeClass;
@@ -15,8 +15,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
 
+import de.woock.ddd.stattauto.gui.fuhrpark.DddStattAuto_Gui_Fuhrpark;
 import de.woock.ddd.stattauto.gui.fuhrpark.entity.station.StationsResource;
-import de.woock.ddd.stattauto.gui.fuhrpark.service.Fuhrpark;
 import de.woock.ddd.stattauto.gui.fuhrpark.service.FuhrparkService;
 import javafx.application.Application;
 
